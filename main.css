@@ -4,12 +4,11 @@ body {
   min-height: 100vh;
   background: url(./assets/rsz_low-poly-texture-28.jpg) no-repeat center center;
   background-size: cover;
-  opacity: 0.8;
   color: #fff;
 }
 
 header {
-  background-color: grey;
+  background-color: #3D5068;
   padding: 15px;
 }
 
