@@ -21,6 +21,11 @@ export const data = {
       "days": 0
     },
     {
+      "name": "Andy",
+      "team": "Sparkles",
+      "days": 0
+    },
+    {
       "name": "Martin",
       "team": "",
       "days": 0
@@ -68,11 +73,6 @@ export const data = {
     {
       "name": "James",
       "team": "",
-      "days": 0
-    },
-    {
-      "name": "Andy",
-      "team": "Sparkles",
       "days": 0
     }
   ]
