@@ -27,52 +27,52 @@ export const data = {
     },
     {
       "name": "Martin",
-      "team": "",
+      "team": "Core",
       "days": 0
     },
     {
       "name": "Stacey",
-      "team": "",
+      "team": "Core",
       "days": 0
     },
     {
       "name": "Ginevra",
-      "team": "",
+      "team": "Core",
       "days": 0
     },
     {
       "name": "Jeremy",
-      "team": "",
+      "team": "Core",
       "days": 0
     },
     {
       "name": "Dan",
-      "team": "",
+      "team": "Core",
       "days": 0
     },
     {
       "name": "Zoe",
-      "team": "",
+      "team": "Core",
       "days": 0
     },
     {
       "name": "Abi",
-      "team": "",
+      "team": "Core",
       "days": 0
     },
     {
       "name": "Hubert",
-      "team": "",
+      "team": "Core",
       "days": 0
     },
     {
       "name": "Freddie",
-      "team": "",
+      "team": "Core",
       "days": 0
     },
     {
       "name": "James",
-      "team": "",
+      "team": "Core",
       "days": 0
     }
   ]
