@@ -7,7 +7,7 @@ const calculateBtnContainer = document.querySelector(".btn-calculate");
  * Create and append a DOM node for a developer
  * @param {*} person The dev for which to create a DOM node for
  */
-const createElement = person => {
+function createElement(person) {
   let personElement = document.createElement("div");
   personElement.className = "person-element row align-items-center border no-border-sm rounded p-3 mb-3";
 
@@ -80,12 +80,14 @@ calculateBtnContainer.addEventListener("click", (event) => {
 
   const actualPoints = potentialPoints - meetingDays - devAwayDays;
 
-  alert(`${daysInSprint} days in sprint\n
+  alert(`
+    ${daysInSprint} days in sprint\n
     ${numberOfDevs} Devs this sprint\n
     ${potentialPoints} potential points in sprint\n
     ${meetingDays} meeting days\n
     ${devAwayDays} dev away days\n
-    *** ${actualPoints} actual points this sprint ***`)
+    *** ${actualPoints} actual points this sprint ***
+    `)
 })
 
 /**
@@ -93,6 +95,6 @@ calculateBtnContainer.addEventListener("click", (event) => {
  * @param {Element} person A person DOM element
  * @returns {string} This person's team this sprint
  */
-const getTeamFromPerson = (person) => {
+function getTeamFromPerson(person) {
   return person.querySelector(".custom-select").selectedOptions[0].value;
 }
