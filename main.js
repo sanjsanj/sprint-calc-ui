@@ -32,7 +32,7 @@ const createElement = person => {
   let dayElement = document.createElement("div");
   dayElement.className = "person__days text-center col-4 col-md-2";
   let dayInput = document.createElement("input");
-  dayInput.className = "form-control";
+  dayInput.className = "form-control js-person-days";
   dayInput.type = "number";
   dayInput.placeholder = "0";
   dayInput.step = ".5";
