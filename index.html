@@ -8,10 +8,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.css">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   <script type="module" src="main.js"></script>
-  <!--
-  // could use for modal  
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  -->
 </head>
 <body>
   <header>
@@ -20,23 +16,41 @@
     </div>
   </header>
   <div class="main container">
-    <div class="person p-3 row align-items-center">
-      <div class="person__name col ">Brian Hughes</div>
-      <div class="person__team col-2">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Core
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2" autocomplete="off"> Sparkles
-            </label>
+    <form>
+      <div class="row p-3 justify-content-end">
+        <div class="col-4 col-md-2 text-center">Team</div>
+        <div class="col-4 col-md-2 text-center">Days Off</div>
+      </div>
+      <div class="people">
+        <div class="row align-items-center border rounded p-3 mb-3">
+          <div class="person__name col">Brian Hughes</div>
+          <div class="person__team text-center col-4 col-md-2">
+            <select class="custom-select" name="team">
+              <option value="core">Core</option>
+              <option value="sparkles">Sparkles</option>
+            </select>
           </div>
+          <div class="person__days text-center col-4 col-md-2">
+            <input class="form-control" type="number" placeholder="0" step=".5" min="0" max="10" id="number">
+          </div>
+        </div>
       </div>
-      <div class="person__days col-2">
-        <label class="m-0">Days off:</label>
-        <input type="number" placeholder="0" step=".5" min="0" max="10" id="number">
+      <hr class="m-5">
+      <div class="row align-items-center border rounded p-3 mb-3">
+        <div class="col">Meetings</div>
+        <div class="person__days text-center col-4 col-md-2">
+          <input class="form-control" type="number" placeholder="0" step=".5" min="0" max="50" id="number">
+        </div>
       </div>
-    </div>
+      <div class="row mt-5 justify-content-end">
+        <div class="col-2">
+            <button type="button" class="btn btn-primary">Calculate Core</button>
+        </div>
+        <div class="col-2">
+            <button type="button" class="btn btn-primary">Calculate Sparkles</button>
+        </div>
+      </div>
+  </form>
   </div>
 </body>
 </html>
