@@ -20,16 +20,21 @@
     </div>
   </header>
   <div class="main container">
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam sapiente earum maxime ipsa aperiam ipsum consequatur quidem delectus praesentium, sint facere eum cumque ex explicabo, rerum assumenda alias illum nisi!</p>
-    <div class="card person">
-      <div class="card-body">
-        <div class="person__name">Brian Hughes</div>
-        <div class="person__team">
-
-        </div>
-        <div class="person__points">
-
-        </div>
+    <div class="person p-3 row align-items-center">
+      <div class="person__name col ">Brian Hughes</div>
+      <div class="person__team col-2">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+              <input type="radio" name="options" id="option1" autocomplete="off" checked> Core
+            </label>
+            <label class="btn btn-secondary">
+              <input type="radio" name="options" id="option2" autocomplete="off"> Sparkles
+            </label>
+          </div>
+      </div>
+      <div class="person__days col-2">
+        <label class="m-0">Days off:</label>
+        <input type="number" placeholder="0" step=".5" min="0" max="10" id="number">
       </div>
     </div>
   </div>
