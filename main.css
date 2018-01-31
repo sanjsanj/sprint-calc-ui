@@ -4,6 +4,7 @@ body {
   min-height: 100vh;
   background: url(./assets/rsz_low-poly-texture-28.jpg) no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   color: #fff;
 }
 
