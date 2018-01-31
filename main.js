@@ -64,8 +64,8 @@ data.people.forEach(person => {
  */
 calculateBtnContainer.addEventListener("click", (event) => {
   event.stopPropagation();
-  const daysInSprint = 10;
   const teamName = event.target.value;
+  const daysInSprint = (teamName === "Sparkles") ? 10 : 5;
 
   const allDevs = [...document.querySelectorAll(".person-element")];
   const sprintDevs = allDevs.filter(person => getTeamFromPerson(person) === teamName);
