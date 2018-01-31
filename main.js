@@ -5,23 +5,45 @@ const pageContainer = document.querySelector(".people");
 const createElement = person => {
   console.log(person);
   let personElement = document.createElement("div");
-  personElement.className = "person p-3 row mb-3";
+  personElement.className = "row align-items-center border rounded p-3 mb-3";
 
   let nameElement = document.createElement("div");
-  nameElement.className = "person__name col";
+  nameElement.className = "person__name col h3";
   nameElement.innerHTML = person.name;
 
   let teamElement = document.createElement("div");
   teamElement.className = "person__team text-center col-4 col-md-2";
-  teamElement.innerHTML = person.team;
+
+  let teamSelect = document.createElement("select");
+  teamSelect.className = "custom-select";
+  teamSelect.name = "team";
+  let option1 = document.createElement("option");
+  option1.value = "Core";
+  option1.text = "Core";
+  option1.selected = person.team === "Core";
+  let option2 = document.createElement("option");
+  teamSelect.add(option1);  
+  option2.value = "Sparkles";
+  option2.text = "Sparkles";
+  option2.selected = person.team === "Sparkles";  
+  teamSelect.add(option2);
 
   let dayElement = document.createElement("div");
   dayElement.className = "person__days text-center col-4 col-md-2";
-  dayElement.innerHTML = person.days;
+  let dayInput = document.createElement("input");
+  dayInput.className = "form-control";
+  dayInput.type = "number";
+  dayInput.placeholder = "0";
+  dayInput.step = ".5";
+  dayInput.min = "0";
+  dayInput.max = "10";
+  dayInput.value = person.days;
 
   personElement.appendChild(nameElement);
   personElement.appendChild(teamElement);
+  teamElement.appendChild(teamSelect);
   personElement.appendChild(dayElement);
+  dayElement.appendChild(dayInput);
 
   pageContainer.appendChild(personElement);
 }

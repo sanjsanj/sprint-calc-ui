@@ -27,3 +27,7 @@ header h1 {
 .main {
   padding: 2em 1em;
 }
+
+hr {
+  border-color: #fff;
+}
