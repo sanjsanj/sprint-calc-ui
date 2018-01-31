@@ -4,12 +4,11 @@ body {
   min-height: 100vh;
   background: url(./assets/rsz_low-poly-texture-28.jpg) no-repeat center center;
   background-size: cover;
-  opacity: 0.8;
   color: #fff;
 }
 
 header {
-  background-color: grey;
+  background-color: #3D5068;
   padding: 15px;
 }
 
@@ -27,23 +26,4 @@ header h1 {
 
 .main {
   padding: 2em 1em;
-}
-
-/* PERSON */
-
-.person {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
-
-.person__name {
-
-}
-
-.person__team {
-  
-}
-
-.person__days {
-  text-align: center;
 }
