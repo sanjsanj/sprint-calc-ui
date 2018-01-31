@@ -5,14 +5,14 @@ const calculateBtn = document.querySelector(".btn-sparkles");
 
 const createElement = person => {
   let personElement = document.createElement("div");
-  personElement.className = "row align-items-center border rounded p-3 mb-3";
+  personElement.className = "row align-items-center border no-border-sm rounded p-3 mb-3";
 
   let nameElement = document.createElement("div");
-  nameElement.className = "person__name col h3";
+  nameElement.className = "person__name col-4 col-md-8 h3";
   nameElement.innerHTML = person.name;
 
   let teamElement = document.createElement("div");
-  teamElement.className = "person__team text-center col-4 col-md-2";
+  teamElement.className = "person__team text-center col-5 col-md-2";
 
   let teamSelect = document.createElement("select");
   teamSelect.className = "custom-select";
@@ -29,7 +29,7 @@ const createElement = person => {
   teamSelect.add(option2);
 
   let dayElement = document.createElement("div");
-  dayElement.className = "person__days text-center col-4 col-md-2";
+  dayElement.className = "person__days text-center col-3 col-md-2";
   let dayInput = document.createElement("input");
   dayInput.className = "form-control js-person-days";
   dayInput.type = "number";

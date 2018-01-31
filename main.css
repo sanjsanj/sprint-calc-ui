@@ -10,6 +10,7 @@ body {
 
 header {
   background-color: #3D5068;
+  border-bottom: 1px solid #3D3343;
   padding: 15px;
 }
 
@@ -26,9 +27,15 @@ header h1 {
 }
 
 .main {
-  padding: 2em 1em;
+  padding: 110px 1em 1em;
 }
 
 hr {
   border-color: #fff;
+}
+
+@media (max-width: 576px) {
+  .no-border-sm {
+    border: 0 !important;
+  }
 }

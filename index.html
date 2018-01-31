@@ -10,7 +10,7 @@
   <script type="module" src="main.js"></script>
 </head>
 <body>
-  <header>
+  <header class="fixed-top">
     <div class="container">
       <img src="./assets/sprintie.png" alt="sprintie logo" />
       <h1>Sprintie</h1>
@@ -26,21 +26,21 @@
 
       </div>
       <hr class="m-5">
-      <div class="row align-items-center border rounded p-3 mb-3">
+      <div class="row align-items-center border no-border-sm rounded p-3 mb-3">
         <div class="col h3">Meetings</div>
         <div class="person__days text-center col-4 col-md-2">
           <input class="form-control js-meetings" type="number" placeholder="0" step=".5" min="0" max="50">
         </div>
       </div>
       <div class="row mt-5 justify-content-end">
-        <div class="col-2">
+        <div class="col-6 col-md-2">
             <button type="button" class="btn btn-light btn-core">Calculate Core</button>
         </div>
-        <div class="col-2">
+        <div class="col-6 col-md-2">
             <button type="button" class="btn btn-light btn-sparkles">Calculate Sparkles</button>
         </div>
       </div>
-  </form>
+    </form>
   </div>
 </body>
 </html>
