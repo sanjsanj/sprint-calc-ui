@@ -13,6 +13,18 @@ header {
   padding: 15px;
 }
 
+header img {
+  width: 80px;
+  display: inline-block;
+}
+
+header h1 {
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  margin-left: 20px;
+}
+
 .main {
   padding: 2em 1em;
 }
