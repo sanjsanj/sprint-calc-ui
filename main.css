@@ -1,9 +1,16 @@
 /* LAYOUT */
 
+body {
+  min-height: 100vh;
+  background: url(./assets/rsz_low-poly-texture-28.jpg) no-repeat center center;
+  background-size: cover;
+  opacity: 0.8;
+  color: #fff;
+}
+
 header {
   background-color: grey;
-  color: #fff;
-  padding: 1em;
+  padding: 15px;
 }
 
 .main {
