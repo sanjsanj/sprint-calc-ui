@@ -1,11 +1,15 @@
 import { data } from "./data.js";
 
 const pageContainer = document.querySelector(".people");
-const calculateBtn = document.querySelector(".btn-sparkles");
+const calculateBtnContainer = document.querySelector(".btn-calculate");
 
+/**
+ * Create and append a DOM node for a developer
+ * @param {*} person The dev for which to create a DOM node for
+ */
 const createElement = person => {
   let personElement = document.createElement("div");
-  personElement.className = "row align-items-center border no-border-sm rounded p-3 mb-3";
+  personElement.className = "person-element row align-items-center border no-border-sm rounded p-3 mb-3";
 
   let nameElement = document.createElement("div");
   nameElement.className = "person__name col-4 col-md-8 h3";
@@ -48,15 +52,47 @@ const createElement = person => {
   pageContainer.appendChild(personElement);
 }
 
+/**
+ * Only use the fetched data to populate the page on first load
+ */
 data.people.forEach(person => {
   createElement(person);
 })
 
-calculateBtn.addEventListener("click", () => {
+/**
+ * Capture event from both calculate buttons and display number of points
+ */
+calculateBtnContainer.addEventListener("click", (event) => {
+  event.stopPropagation();
   const daysInSprint = 10;
-  const numberOfDevs = data.people.filter(person => person.team === "Sparkles").length;
+  const teamName = event.target.value;
+
+  const allDevs = [...document.querySelectorAll(".person-element")];
+  const sprintDevs = allDevs.filter(person => getTeamFromPerson(person) === teamName);
+  const numberOfDevs = sprintDevs.length;
   const potentialPoints = numberOfDevs * daysInSprint;
   const meetingDays = document.querySelector(".js-meetings").value || 0;
-  const devAwayDays = document.querySelector(".js-person-days").value || 0;
-  alert(`${daysInSprint} days in sprint\n${numberOfDevs} Devs this sprint\n${potentialPoints} potential points in sprint\n${meetingDays} meeting days\n${devAwayDays} dev away days`)
+
+  const devAwayDays = sprintDevs.reduce((accumulator, element) => {
+    accumulator += Number(element.querySelector(".js-person-days").value);
+    return accumulator;
+  }, 0);
+
+  const actualPoints = potentialPoints - meetingDays - devAwayDays;
+
+  alert(`${daysInSprint} days in sprint\n
+    ${numberOfDevs} Devs this sprint\n
+    ${potentialPoints} potential points in sprint\n
+    ${meetingDays} meeting days\n
+    ${devAwayDays} dev away days\n
+    *** ${actualPoints} actual points this sprint ***`)
 })
+
+/**
+ * Helper that gets the team name from a person element
+ * @param {Element} person A person DOM element
+ * @returns {string} This person's team this sprint
+ */
+const getTeamFromPerson = (person) => {
+  return person.querySelector(".custom-select").selectedOptions[0].value;
+}
