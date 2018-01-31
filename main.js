@@ -4,7 +4,6 @@ const pageContainer = document.querySelector(".people");
 const calculateBtn = document.querySelector(".btn-sparkles");
 
 const createElement = person => {
-  console.log(person);
   let personElement = document.createElement("div");
   personElement.className = "row align-items-center border rounded p-3 mb-3";
 
@@ -57,7 +56,7 @@ calculateBtn.addEventListener("click", () => {
   const daysInSprint = 10;
   const numberOfDevs = data.people.filter(person => person.team === "Sparkles").length;
   const potentialPoints = numberOfDevs * daysInSprint;
-  const meetingDays = document.querySelector(".js-meetings").value;
-  const devAwayDays = document.querySelector(".js-person-days").value;
+  const meetingDays = document.querySelector(".js-meetings").value || 0;
+  const devAwayDays = document.querySelector(".js-person-days").value || 0;
   alert(`${daysInSprint} days in sprint\n${numberOfDevs} Devs this sprint\n${potentialPoints} potential points in sprint\n${meetingDays} meeting days\n${devAwayDays} dev away days`)
 })
