@@ -14,14 +14,24 @@ header {
 }
 
 .main {
-  padding: 15px;
-}
-
-/* CARD */
-
-.card {
-  flex-direction: row;
+  padding: 2em 1em;
 }
 
 /* PERSON */
 
+.person {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+
+.person__name {
+
+}
+
+.person__team {
+  
+}
+
+.person__days {
+  text-align: center;
+}
